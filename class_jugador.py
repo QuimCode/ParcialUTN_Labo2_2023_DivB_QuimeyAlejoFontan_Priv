@@ -108,7 +108,7 @@ class Personaje:
                         self.imagen = self.obtener_imagen_ascendente()
                     else:
                         self.imagen = self.obtener_imagen_descendente()
-                    return  # Salir del método para evitar la animación durante el salto
+                    return  
 
             if self.indice_animacion >= len(animaciones):
                 self.indice_animacion = 0
@@ -191,7 +191,9 @@ class Personaje:
             self.ultimo_dano = tiempo_actual
             if self.vida <= 0:
                 if self.oportunidades_revivir > 0:
-                    self.vida = 100  # Vida inicial
+                    self.x = 10  
+                    self.y = 850  
+                    self.vida = 100  
                     self.oportunidades_revivir -= 1
                 else:
                     self.vida = 0
@@ -210,8 +212,7 @@ class Personaje:
     def perder_vida(self):
         if self.vida <= 0:
             if self.oportunidades_revivir > 0:
-                self.x = 10  # Posición x inicial
-                self.y = 850  # Posición y inicial
+
                 self.vida = 100  # Vida inicial
                 self.oportunidades_revivir -= 1
 

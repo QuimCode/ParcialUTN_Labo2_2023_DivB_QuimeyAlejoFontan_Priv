@@ -22,7 +22,6 @@ def guardar_puntos_nivel(puntos_nivel, jugador, puntos_totales):
     with open("puntos_por_nivel.json", "r") as archivo:
         datos_existentes = json.load(archivo)
 
-    # Actualizar los puntos totales con los puntos del nivel actual
     puntos_totales += puntos_nivel
 
     datos_nivel["puntos_totales"] = puntos_totales

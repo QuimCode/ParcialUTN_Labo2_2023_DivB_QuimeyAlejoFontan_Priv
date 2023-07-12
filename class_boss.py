@@ -30,9 +30,9 @@ class EnemigoBoss(Enemigo):
             self.indice_animacion += 1
 
         if self.direccion == 1:
-            self.imagenes_actuales = self.imagenes_derecha  # Usar imágenes de caminata hacia la derecha
+            self.imagenes_actuales = self.imagenes_derecha  
         else:
-            self.imagenes_actuales = self.imagenes_izquierda  # Usar imágenes de caminata hacia la izquierda
+            self.imagenes_actuales = self.imagenes_izquierda 
 
         self.indice_animacion += 1
         if self.indice_animacion >= len(self.imagenes_actuales):

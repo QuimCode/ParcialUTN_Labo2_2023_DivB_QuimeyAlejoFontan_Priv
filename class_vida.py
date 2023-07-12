@@ -8,8 +8,10 @@ class Cura:
         self.height = height
         self.activo = True
         self.eliminado = False
-        self.color = (0, 255, 0)
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
+
+        self.imagen = pygame.image.load("Recursos\Pociones\Red potions\poção vermelha.png")
+        self.imagen = pygame.transform.scale(self.imagen, (self.width, self.height))
 
         self.actualizar_hitbox()
 
@@ -33,7 +35,8 @@ class Cura:
 
     def dibujar(self, pantalla):
         if self.activo:
-            pygame.draw.rect(pantalla, self.color, self.rect)
+            pantalla.blit(self.imagen, self.rect.topleft)
+            self.actualizar_hitbox()
 
 objetos_nivel1 = [Cura(1500, 1010, 90, 90),
                     Cura(1000, 1010, 90, 90)

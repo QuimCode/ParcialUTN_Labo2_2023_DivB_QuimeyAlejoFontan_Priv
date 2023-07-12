@@ -14,6 +14,8 @@ class Trampa(Caja):
         self.actualizar_hitbox()
         pantalla.blit(self.image, self.rect.topleft)
 
+trampas_nivel1 = []
+
 trampas_nivel2 = [
     Trampa(620, 950, 150, 150, 40, 40, "Recursos\Trampas\end\\burning_end_4.png"),
     Trampa(680, 950, 150, 150, 40, 40, "Recursos\Trampas\end\\burning_end_1.png"),

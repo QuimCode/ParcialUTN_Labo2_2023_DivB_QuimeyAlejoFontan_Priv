@@ -29,7 +29,7 @@ def nivel_1(tiempo_total):
     fondo_de_nivel = fondo_nivel1()
     mostrar_puntos(PANTALLA, puntos, tiempo_restante, oportunidades_revivir)
 
-    Jugador = Personaje(1878, 850, 100, 100)
+    Jugador = Personaje(10, 850, 100, 100)
 
     plataformas_del_nivel = plataformas_nivel1
     cajas_del_nivel = cajas_nivel1
@@ -53,7 +53,7 @@ def nivel_1(tiempo_total):
         Jugador.aplicar_gravedad()
         Jugador.limites()
 
-        detectar_colision(Jugador, plataformas_nivel1, cajas_del_nivel, enemigos_nivel1, enemigos_aleatorios, objetos_nivel1, trampas_nivel2)
+        detectar_colision(Jugador, plataformas_nivel1, cajas_del_nivel, enemigos_nivel1, enemigos_aleatorios, objetos_nivel1, trampas_nivel1)
 
         Jugador.actualizar_animacion()
         Jugador.perder_vida()

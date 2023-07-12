@@ -132,7 +132,7 @@ def nivel_2(tiempo_total, puntos_totales):
             print("j")
             guardar_puntos_nivel(Jugador.puntos, Jugador, puntos_totales)
             nivel_3(tiempo_total, puntos_totales)
-            nivel = False  # Salir del bucle del nivel 1 después de ejecutar el nivel 2
+            nivel = False  
 
         dibujar_banner(PANTALLA)
         Jugador.dibujar(PANTALLA)

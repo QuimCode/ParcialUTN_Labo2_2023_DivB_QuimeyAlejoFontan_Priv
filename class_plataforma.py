@@ -8,7 +8,7 @@ class Plataforma:
         self.y = y
         self.width = width
         self.height = height
-        self.movil = movil  # Indica si la plataforma es móvil
+        self.movil = movil 
         self.coordenada_inicial = coordenada_inicial
         self.coordenada_final = coordenada_final
         self.velocidad = velocidad
@@ -56,13 +56,13 @@ class Plataforma:
 
             if self.x_actual >= self.coordenada_final:
                 self.x_actual = self.coordenada_final
-                self.velocidad *= -1  # Invertir la velocidad para cambiar la dirección
+                self.velocidad *= -1  
             elif self.x_actual <= self.coordenada_inicial:
                 self.x_actual = self.coordenada_inicial
-                self.velocidad *= -1  # Invertir la velocidad para cambiar la dirección
+                self.velocidad *= -1  
 
             self.rect.x = self.x_actual
-            self.actualizar_hitbox()  # Actualizar todas las hitboxes de la plataforma
+            self.actualizar_hitbox() 
 
         self.actualizar_hitbox() 
 
